@@ -1,0 +1,11 @@
+# NAME: Polymarket (Surge)
+# 覆盖 polymarket.com 全部子域名（clob / gamma-api / data-api / relayer-v2 / ws-subscriptions-clob 等）
+
+# ---------- 主域名 ----------
+DOMAIN-SUFFIX,polymarket.com
+
+# ---------- 登录（Magic 邮箱登录） ----------
+DOMAIN-SUFFIX,magic.link
+
+# ---------- Polygon 链上 RPC ----------
+DOMAIN,polygon-mainnet.g.alchemy.com
