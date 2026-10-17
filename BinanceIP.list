@@ -1,0 +1,18 @@
+# NAME: BinanceIP (Surge)
+# 币安 App 大陆线路的硬编码 IP（阿里云 / 腾讯云），不带域名。
+# 必须放在 ChinaASN / GEOIP 等 IP 类规则之前，否则会被判定为国内 IP 直连。
+# 2026-10-18 手动整理
+IP-CIDR,39.108.213.59/32,no-resolve
+IP-CIDR,112.74.86.215/32,no-resolve
+IP-CIDR,112.74.85.187/32,no-resolve
+IP-CIDR,47.107.38.4/32,no-resolve
+IP-CIDR,112.74.111.231/32,no-resolve
+IP-CIDR,47.106.193.36/32,no-resolve
+IP-CIDR,43.139.115.210/32,no-resolve
+IP-CIDR,47.107.48.59/32,no-resolve
+IP-CIDR,112.74.86.6/32,no-resolve
+IP-CIDR,39.108.92.184/32,no-resolve
+IP-CIDR,134.175.47.238/32,no-resolve
+IP-CIDR,112.74.36.60/32,no-resolve
+IP-CIDR,182.254.194.76/32,no-resolve
+IP-CIDR,39.108.140.235/32,no-resolve
