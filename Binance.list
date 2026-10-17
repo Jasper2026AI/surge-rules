@@ -69,18 +69,9 @@ DOMAIN,domain-config-1306379396.file.myqcloud.com
 DOMAIN,bin-prod-new-websocket-alb-1463526464.ap-northeast-1.elb.amazonaws.com
 DOMAIN,aad90d5c0e88c4b4285bd912f64d970d-1403944741.ap-northeast-1.elb.amazonaws.com
 
-# ---------- App 硬编码 IP（走代理）----------
-IP-CIDR,47.107.98.27/32,no-resolve
-IP-CIDR,47.107.127.135/32,no-resolve
-IP-CIDR,47.107.32.31/32,no-resolve
+# ---------- App 硬编码 IP（AWS，走代理）----------
+# 中国大陆云服务器 IP 已移到 BinanceCN.list
 IP-CIDR,52.68.117.1/32,no-resolve
 IP-CIDR,35.77.148.188/32,no-resolve
 IP-CIDR,54.150.106.1/32,no-resolve
 IP-CIDR,13.248.135.87/32,no-resolve
-# 2026-10-18 登录抓包新增（阿里云 / 腾讯云节点）
-IP-CIDR,39.108.213.59/32,no-resolve
-IP-CIDR,120.25.250.183/32,no-resolve
-IP-CIDR,120.25.76.84/32,no-resolve
-IP-CIDR,120.77.220.2/32,no-resolve
-IP-CIDR,8.133.231.173/32,no-resolve
-IP-CIDR,81.71.41.114/32,no-resolve

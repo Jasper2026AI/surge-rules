@@ -1,0 +1,17 @@
+# NAME: BinanceCN (Surge)
+# 币安 App 写死的中国大陆云服务器 IP（阿里云 / 腾讯云），不带域名，直连会暴露真实 IP。
+# 经代理连不上（0 B 回包），App 会退回到别的直连 IP，所以建议用 REJECT，
+# 迫使 App 改走 binance.com 等正常域名（Binance.list 会让它们走代理）。
+# 2026-10-18 根据登录抓包整理
+IP-CIDR,47.107.98.27/32,no-resolve
+IP-CIDR,47.107.127.135/32,no-resolve
+IP-CIDR,47.107.32.31/32,no-resolve
+IP-CIDR,39.108.213.59/32,no-resolve
+IP-CIDR,120.25.250.183/32,no-resolve
+IP-CIDR,120.25.76.84/32,no-resolve
+IP-CIDR,120.77.220.2/32,no-resolve
+IP-CIDR,8.133.231.173/32,no-resolve
+IP-CIDR,81.71.41.114/32,no-resolve
+IP-CIDR,112.74.111.231/32,no-resolve
+IP-CIDR,106.55.239.211/32,no-resolve
+IP-CIDR,47.106.193.36/32,no-resolve
