@@ -1,17 +1,32 @@
-# NAME: BinanceCN (Surge)
-# 币安 App 写死的中国大陆云服务器 IP（阿里云 / 腾讯云），不带域名，直连会暴露真实 IP。
-# 经代理连不上（0 B 回包），App 会退回到别的直连 IP，所以建议用 REJECT，
-# 迫使 App 改走 binance.com 等正常域名（Binance.list 会让它们走代理）。
+# NAME: BinanceCN (Surge) —— 建议策略：REJECT
+# 币安 App 的"中国大陆加速线路"：先通过 saasexch / yingwangtech 拿到大陆服务器 IP 列表，
+# 再直接连这些阿里云(深圳)/腾讯云(广州)的 IP，不带域名，会暴露真实 IP。
+# 逐个 IP 拒绝会被 App 换下一个，所以这里按网段拒绝，并拒绝线路调度域名，
+# 迫使 App 回到 binance.com 等正常域名（由 Binance.list 走代理）。
+# 注意：这些网段也承载其他国内服务，如有国内 App 异常，请删除对应网段。
 # 2026-10-18 根据登录抓包整理
-IP-CIDR,47.107.98.27/32,no-resolve
-IP-CIDR,47.107.127.135/32,no-resolve
-IP-CIDR,47.107.32.31/32,no-resolve
-IP-CIDR,39.108.213.59/32,no-resolve
-IP-CIDR,120.25.250.183/32,no-resolve
-IP-CIDR,120.25.76.84/32,no-resolve
-IP-CIDR,120.77.220.2/32,no-resolve
-IP-CIDR,8.133.231.173/32,no-resolve
-IP-CIDR,81.71.41.114/32,no-resolve
-IP-CIDR,112.74.111.231/32,no-resolve
-IP-CIDR,106.55.239.211/32,no-resolve
-IP-CIDR,47.106.193.36/32,no-resolve
+
+# ---------- 大陆线路调度域名 ----------
+DOMAIN-SUFFIX,saasexch.com
+DOMAIN-SUFFIX,saasexch.cc
+DOMAIN-SUFFIX,saasexch.co
+DOMAIN-SUFFIX,saasexch.io
+DOMAIN-SUFFIX,yingwangtech.cloud
+DOMAIN-SUFFIX,yingwangtech.net
+DOMAIN-SUFFIX,yingwangtech.mobi
+DOMAIN-SUFFIX,yingwangtech.club
+DOMAIN-SUFFIX,yingwangtech.cc
+
+# ---------- 阿里云 深圳 ----------
+IP-CIDR,47.106.0.0/16,no-resolve
+IP-CIDR,47.107.0.0/16,no-resolve
+IP-CIDR,39.108.0.0/16,no-resolve
+IP-CIDR,120.25.0.0/16,no-resolve
+IP-CIDR,120.77.0.0/16,no-resolve
+IP-CIDR,112.74.0.0/16,no-resolve
+IP-CIDR,8.133.0.0/16,no-resolve
+
+# ---------- 腾讯云 广州 ----------
+IP-CIDR,81.71.0.0/16,no-resolve
+IP-CIDR,106.55.0.0/16,no-resolve
+IP-CIDR,182.254.0.0/16,no-resolve
